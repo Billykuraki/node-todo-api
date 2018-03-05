@@ -2,7 +2,7 @@ const {ObjectID} = require('mongodb');
 
 const {mongoose} = require('./../server/db/mongoose');
 const {Todo} = require('./../server/models/todo');
-const {User} = require('./../models/User');
+const {User} = require('./../server/models/user');
 
 var id = '5a93b08796e56b54f27df0c11';
 
