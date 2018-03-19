@@ -4,17 +4,12 @@ const bcrypt = require('bcryptjs');
 
 var password = '123abc';
 
-// bcrypt.genSalt(10, (err, salt) => {
-//     bcrypt.hash(password, salt, (err, hash) => {
-//         console.log(hash);
-//     });
-// });
-
-var hashPassword = '$2a$10$riufL0lrWMpTZzWnpguKL.LiwXWMz2.jwrIcBorcq63SdK.S4U8bG';
-
-bcrypt.compare(password, hashPassword, (err, res) => {
-    console.log(res);
+bcrypt.genSalt(10, (err, salt) => {
+    bcrypt.hash(password, salt, (err, hash) => {
+        console.log(hash);
+    });
 });
+
 
 // var data = {
 //     id:10
@@ -24,7 +19,7 @@ bcrypt.compare(password, hashPassword, (err, res) => {
 // console.log(token);
 
 // var decoded = jwt.verify(token, '123abc');
-// console.log('decoded', decoded);node 
+// console.log('decoded', decoded);
 
 
 // var message = 'I am user numer 3';
